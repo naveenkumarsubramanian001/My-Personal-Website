@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZoroDev Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Fira Code', monospace;
+      background: linear-gradient(to bottom right, #000000, #013220);
+    }
+    .hover-effect:hover {
+      color: #00ffcc;
+      transform: scale(1.05);
+      transition: 0.3s ease;
+    }
+    .glow-border:hover {
+      box-shadow: 0 0 12px #00FF00;
+      border-color: #00FF00;
+    }
+    .animated-text {
+      background: linear-gradient(90deg, #00FF00, #00ccff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: pulse 3s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.6; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="text-white">
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-black z-50 shadow-lg">
+    <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-green-400 text-2xl font-bold">ZoroDev</div>
+      <div class="space-x-6 text-sm md:text-base">
+        <a href="index.html" class="text-green-300 hover-effect">Home</a>
+        <a href="about.html" class="text-green-300 hover-effect">About</a>
+        <a href="resume.html" class="text-green-300 hover-effect">Resume</a>
+        <a href="projects.html" class="text-green-300 hover-effect">Projects</a>
+        <a href="achievements.html" class="text-green-300 hover-effect">Achievements</a>
+        <a href="others.html" class="text-green-300 hover-effect">others</a>
+        <a href="contact.html" class="text-green-300 hover-effect">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581092334494-3e84c66f4f9b');">
+    <div class="bg-black bg-opacity-70 p-10 rounded-lg text-center max-w-2xl">
+      <h1 class="text-5xl font-extrabold text-green-400 mb-4 animated-text">Hi, I'm ZoroDev</h1>
+      <p class="text-purple-200 text-lg">Tech Enthusiast | Innovator | Drone and AI Developer</p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="p-10 bg-gradient-to-br from-green-900 to-black text-white">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-green-300 mb-6">What I Do</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="p-6 border border-green-400 rounded-xl glow-border">
+          <h3 class="text-2xl mb-2 text-green-200">Web Development</h3>
+          <p>Building responsive, efficient and scalable web apps using latest frameworks.</p>
+        </div>
+        <div class="p-6 border border-green-400 rounded-xl glow-border">
+          <h3 class="text-2xl mb-2 text-green-200">AI & ML Projects</h3>
+          <p>Solving real-world problems using machine learning, deep learning, and NLP.</p>
+        </div>
+        <div class="p-6 border border-green-400 rounded-xl glow-border">
+          <h3 class="text-2xl mb-2 text-green-200">IoT & Drones</h3>
+          <p>Designing smart autonomous systems for safety and monitoring.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="p-10 bg-black text-white">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-green-400 mb-6 text-center">Journey So Far</h2>
+      <ol class="relative border-l border-green-500">
+        <li class="mb-10 ml-6">
+          <div class="absolute w-3 h-3 bg-green-500 rounded-full -left-1.5"></div>
+          <h3 class="text-xl font-semibold">Started Learning Development</h3>
+          <p class="text-sm text-gray-300">Started with HTML/CSS and moved to full-stack tech.</p>
+        </li>
+        <li class="mb-10 ml-6">
+          <div class="absolute w-3 h-3 bg-green-500 rounded-full -left-1.5"></div>
+          <h3 class="text-xl font-semibold">Built My First Drone</h3>
+          <p class="text-sm text-gray-300">Self-made drone for gunshot detection using sensors.</p>
+        </li>
+        <li class="mb-10 ml-6">
+          <div class="absolute w-3 h-3 bg-green-500 rounded-full -left-1.5"></div>
+          <h3 class="text-xl font-semibold">Internships & Freelance Projects</h3>
+          <p class="text-sm text-gray-300">Contributed to real projects, gained hands-on experience.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-tr from-black to-green-900 text-center p-4 text-green-400">
+    &copy; 2025 ZoroDev | Designed with passion and precision.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Others - ZoroDev</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Fira Code', monospace;
+      background: linear-gradient(to bottom right, #000000, #013220);
+    }
+    .hover-effect:hover {
+      color: #75A356;
+      transform: scale(1.05);
+      transition: 0.3s ease;
+    }
+    .glow-border {
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .glow-border:hover {
+      border-color: #75A356;
+      box-shadow: 0 0 10px #75A356;
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-black z-50 shadow-lg">
+    <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-green-400 text-2xl font-bold">ZoroDev</div>
+      <div class="space-x-6 text-sm md:text-base">
+        <a href="index.html" class="text-green-300 hover-effect">Home</a>
+        <a href="aboutme.html" class="text-green-300 hover-effect underline font-bold">About Me</a>
+        <a href="resume.html" class="text-green-300 hover-effect">Resume</a>
+        <a href="projects.html" class="text-green-300 hover-effect">Projects</a>
+        <a href="achievements.html" class="text-green-300 hover-effect">Achievements</a>
+        <a href="others.html" class="text-green-300 hover-effect">Others</a>
+        <a href="contact.html" class="text-green-300 hover-effect">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Others Section -->
+  <main class="max-w-4xl mx-auto p-8">
+    <h1 class="text-4xl font-bold text-green-400 mb-6 text-center">Beyond Code</h1>
+    <p class="text-center text-gray-300 mb-10">What drives me outside the tech realm – community, creativity, and curiosity.</p>
+
+    <!-- Community Service -->
+    <section class="mb-12">
+      <h2 class="text-2xl text-green-300 font-semibold mb-4">Community Service</h2>
+      <div class="bg-black bg-opacity-60 p-6 rounded-lg glow-border">
+        <p class="text-gray-300 mb-2">As a <span class="text-green-400 font-medium">volunteer coach at U&I</span>, I lead and mentor volunteers who teach underprivileged children weekly. I organize engaging sessions, host motivational events, and lead <span class="text-green-400">crowdfunding campaigns</span> to support educational causes.</p>
+        <p class="text-gray-300">Being a part of something bigger than myself inspires my approach to both tech and life — always learning, always serving.</p>
+      </div>
+    </section>
+
+    <!-- Hobbies -->
+    <section class="mb-12">
+      <h2 class="text-2xl text-green-300 font-semibold mb-4">Hobbies</h2>
+      <div class="bg-black bg-opacity-60 p-6 rounded-lg glow-border">
+        <ul class="list-disc list-inside text-gray-300 space-y-2">
+          <li><span class="text-green-400">Reading Sci-Fi & Mythology:</span> Exploring imaginative worlds and timeless epics sharpens both logic and creativity.</li>
+          <li><span class="text-green-400">Sketching & Doodling:</span> My notebooks are full of wired ideas — literally and figuratively!</li>
+          <li><span class="text-green-400">Exploring Tech Blogs & Open Source Projects:</span> A continuous learner by nature, I dive into dev journals and GitHub gems.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Photography & Filmmaking -->
+    <section class="mb-12">
+      <h2 class="text-2xl text-green-300 font-semibold mb-4">Photography & Filmmaking</h2>
+      <div class="bg-black bg-opacity-60 p-6 rounded-lg glow-border">
+        <p class="text-gray-300 mb-2">I see the world in frames. Through my lens, I tell stories — from urban street life to serene nature trails.</p>
+        <p class="text-gray-300 mb-2">My <span class="text-green-400">short films</span> reflect not just visuals but emotion and atmosphere. I experiment with <span class="text-green-400">cinematic transitions</span>, music layering, and visual storytelling techniques that make each project unique.</p>
+        <p class="text-gray-300">Whether I’m editing reels or shooting landscapes, film is my creative playground.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-center p-4 text-green-400 mt-10">
+    &copy; 2025 ZoroDev | Designed with passion and precision.
+  </footer>
+
+</body>
+</html>
