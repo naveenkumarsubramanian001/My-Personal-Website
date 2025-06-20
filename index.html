@@ -3,49 +3,221 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZoroDev Portfolio</title>
+  <title>NAVEEN KUMAR'S Portfolio</title>
+  <link rel="icon" type="image/png" href="https://ik.imagekit.io/hajnl1jjn/vecteezy_roronoa-zoro-symbols-flag-one-piece_21857991.jpg?updatedAt=1750436310729" />
+
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Fira Code', monospace;
-      background: linear-gradient(to bottom right, #000000, #013220);
-    }
-    .hover-effect:hover {
-      color: #00ffcc;
-      transform: scale(1.05);
-      transition: 0.3s ease;
-    }
-    .glow-border:hover {
-      box-shadow: 0 0 12px #00FF00;
-      border-color: #00FF00;
-    }
-    .animated-text {
-      background: linear-gradient(90deg, #00FF00, #00ccff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: pulse 3s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.6; }
-      100% { opacity: 1; }
-    }
+    /* Global font & background */
+body {
+  font-family: 'Fira Code', monospace;
+  background: linear-gradient(to bottom right, #000000, #013220); /* Dark sword aura */
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+/* Zoro Navbar Style */
+nav a {
+  position: relative;
+  color: #66ff99;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffcc;
+  transform: scale(1.05);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: #00ffcc;
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Header Glow on Hover */
+h1, h2, h3 {
+  transition: color 0.3s ease;
+}
+h1:hover, h2:hover, h3:hover {
+  color: #00ffcc;
+}
+
+/* Zoro Hero Section Text */
+.animated-text {
+  background: linear-gradient(90deg, #00FF00, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Reusable Button */
+.btn-zoro,
+.btn-certificate,
+.btn-send {
+  background: linear-gradient(90deg, #00ff99, #00ccff);
+  color: #000;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 transparent;
+}
+
+.btn-zoro:hover,
+.btn-certificate:hover,
+.btn-send:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #00ccff, #00ff99);
+  box-shadow: 0 0 12px #00ffcc;
+  color: #000;
+}
+
+/* Project Cards */
+.glow-border {
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.glow-border:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: #00FF00;
+  box-shadow: 0 0 16px #00ff99;
+}
+
+/* Timeline Dots */
+ol li div {
+  box-shadow: 0 0 10px #00ff99;
+}
+
+/* Contact Form */
+input,
+textarea {
+  background: #000;
+  border: 1px solid #00ff99;
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 0.4rem;
+  transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #00ffcc;
+  box-shadow: 0 0 8px #00ffcc;
+}
+
+/* Footer Text */
+footer {
+  font-weight: 500;
+  background: linear-gradient(to top left, #000000, #013220);
+  color: #66ff99;
+}
+
+/* Card Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glow-border {
+  animation: fadeInUp 0.8s ease-out both;
+}
+/* Zoro Section Box */
+.section-bg {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-left: 4px solid #00ff99;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
+  transition: all 0.3s ease;
+}
+
+.section-bg:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 25px #00ff99;
+}
+
+/* Resume Title Enhancer */
+.section-bg h2 {
+  color: #00ffcc;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #00ff99;
+  padding-bottom: 0.5rem;
+  transition: 0.3s ease;
+}
+
+.section-bg h2:hover {
+  color: #00ff99;
+}
+
+/* Entry formatting */
+.resume-entry {
+  margin-bottom: 1rem;
+}
+
+.resume-entry strong {
+  color: #66ff99;
+}
+
+.resume-entry span {
+  display: block;
+  font-size: 0.875rem;
+  color: #cccccc;
+}
+
+/* Inner list styling */
+.section-bg ul li {
+  color: #dddddd;
+  margin-bottom: 0.5rem;
+}
+
+html {
+  scroll-padding-top: 3.5rem; /* Adjust based on navbar height */
+  scroll-behavior: smooth;
+}
+
+
   </style>
 </head>
 <body class="text-white">
   <!-- Navbar -->
   <header class="sticky top-0 bg-black z-50 shadow-lg">
     <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <div class="text-green-400 text-2xl font-bold">ZoroDev</div>
+      <div class="text-green-400 text-2xl font-bold">Portfolio</div>
       <div class="space-x-6 text-sm md:text-base">
-        <a href="index.html" class="text-green-300 hover-effect">Home</a>
-        <a href="about.html" class="text-green-300 hover-effect">About</a>
-        <a href="resume.html" class="text-green-300 hover-effect">Resume</a>
-        <a href="projects.html" class="text-green-300 hover-effect">Projects</a>
-        <a href="achievements.html" class="text-green-300 hover-effect">Achievements</a>
-        <a href="others.html" class="text-green-300 hover-effect">others</a>
-        <a href="contact.html" class="text-green-300 hover-effect">Contact</a>
+        <a href="#home" class="text-green-300 hover-effect">Home</a>
+        <a href="#projects" class="text-green-300 hover-effect">Projects</a>
+        <a href="#achievements" class="text-green-300 hover-effect">Achievements</a>
+        <a href="#resume" class="text-green-300 hover-effect">Resume</a>
+        <a href="#others" class="text-green-300 hover-effect">Others</a>
+        <a href="#contact" class="text-green-300 hover-effect">Contact</a>
+
       </div>
     </nav>
   </header>
@@ -53,31 +225,11 @@
   <!-- Hero Section -->
   <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1581092334494-3e84c66f4f9b');">
     <div class="bg-black bg-opacity-70 p-10 rounded-lg text-center max-w-2xl">
-      <h1 class="text-5xl font-extrabold text-green-400 mb-4 animated-text">Hi, I'm ZoroDev</h1>
-      <p class="text-purple-200 text-lg">Tech Enthusiast | Innovator | Drone and AI Developer</p>
+      <h1 class="text-5xl font-extrabold text-green-400 mb-4 animated-text">Hi, I'm Naveen Kumar</h1>
+      <p class="text-purple-200 text-lg">Data analyst | Entrepreneur | Cloud Engineer</p>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="p-10 bg-gradient-to-br from-green-900 to-black text-white">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="text-4xl font-bold text-green-300 mb-6">What I Do</h2>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="p-6 border border-green-400 rounded-xl glow-border">
-          <h3 class="text-2xl mb-2 text-green-200">Web Development</h3>
-          <p>Building responsive, efficient and scalable web apps using latest frameworks.</p>
-        </div>
-        <div class="p-6 border border-green-400 rounded-xl glow-border">
-          <h3 class="text-2xl mb-2 text-green-200">AI & ML Projects</h3>
-          <p>Solving real-world problems using machine learning, deep learning, and NLP.</p>
-        </div>
-        <div class="p-6 border border-green-400 rounded-xl glow-border">
-          <h3 class="text-2xl mb-2 text-green-200">IoT & Drones</h3>
-          <p>Designing smart autonomous systems for safety and monitoring.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Timeline Section -->
   <section class="p-10 bg-black text-white">
@@ -86,26 +238,477 @@
       <ol class="relative border-l border-green-500">
         <li class="mb-10 ml-6">
           <div class="absolute w-3 h-3 bg-green-500 rounded-full -left-1.5"></div>
-          <h3 class="text-xl font-semibold">Started Learning Development</h3>
-          <p class="text-sm text-gray-300">Started with HTML/CSS and moved to full-stack tech.</p>
+          <h3 class="text-xl font-semibold">Completed 12th Standard</h3>
+          <p class="text-sm text-gray-300">Graduated with 81% marks, building a strong academic foundation in core subjects.</p>
+          <span class="text-sm text-gray-400 block">  May 2022</span>
         </li>
+
         <li class="mb-10 ml-6">
           <div class="absolute w-3 h-3 bg-green-500 rounded-full -left-1.5"></div>
-          <h3 class="text-xl font-semibold">Built My First Drone</h3>
-          <p class="text-sm text-gray-300">Self-made drone for gunshot detection using sensors.</p>
+          <h3 class="text-xl font-semibold">Started B.Tech in Artificial Intelligence & Machine Learning</h3>
+          <p class="text-sm text-gray-300">Pursuing my undergraduate degree at St. Joseph’s College of Engineering.</p>
+          <span class="text-sm text-gray-400 block">November 2022 – Present </span>
         </li>
+
         <li class="mb-10 ml-6">
           <div class="absolute w-3 h-3 bg-green-500 rounded-full -left-1.5"></div>
-          <h3 class="text-xl font-semibold">Internships & Freelance Projects</h3>
-          <p class="text-sm text-gray-300">Contributed to real projects, gained hands-on experience.</p>
+          <h3 class="text-xl font-semibold">First Internship at Trios Technologies</h3>
+          <p class="text-sm text-gray-300"> Gained a solid foundation in Machine Learning fundamentals and hands-on experience with key Python libraries like <strong>Pandas</strong>, <strong>NumPy</strong>, <strong>Matplotlib</strong>, and <strong>Scikit-learn</strong>. Built and evaluated ML models while working on real-world datasets.</p>
+          <span class="text-sm text-gray-400 block"> Jun 2024</span>
         </li>
+
+        <li class="mb-10 ml-6">
+          <div class="absolute w-3 h-3 bg-green-500 rounded-full -left-1.5"></div>
+          <h3 class="text-xl font-semibold">Second Internship at NLC India Limited</h3>
+          <p class="text-sm text-gray-300">Completed a hands-on Data Analytics internship where I practiced advanced <strong>SQL queries</strong>, built interactive <strong>Power BI dashboards</strong>, and worked on <strong>real-time data analytics projects</strong> to drive actionable insights.</p>
+          <span class="text-sm text-gray-400 block"> Jun 2025 </span>
+        </li>
+
       </ol>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gradient-to-tr from-black to-green-900 text-center p-4 text-green-400">
-    &copy; 2025 ZoroDev | Designed with passion and precision.
-  </footer>
+  <!-- Projects Section -->
+  <main id="projects" class="max-w-6xl mx-auto p-8">
+    <h1 class="text-4xl font-extrabold text-green-400 mb-8 text-center">My Projects</h1>
+
+    <!-- Project Card -->
+    <div class="grid md:grid-cols-2 gap-12 items-stretch">
+      <!-- Project 1 -->
+      <div class="bg-black bg-opacity-60 p-6 rounded-lg glow-border flex flex-col justify-between h-full">
+        <img src="https://via.placeholder.com/600x300?text=Weather+Risk+Predictor" alt="Weather Prediction System" class="rounded mb-4 w-full">
+
+      <div class="flex-grow">
+        <h2 class="text-2xl font-bold text-green-300 mb-2">Weather Risk Prediction System</h2>
+        <p class="text-gray-300">
+          A real-time system that forecasts potential weather risks like storms or heatwaves by continuously analyzing live data. It processes, predicts, and presents insights through a dynamic dashboard for instant awareness and action.
+         </p>
+      </div>
+
+      <div class="mt-6">
+        <a href="https://github.com/naveenkumarsubramanian001" target="_blank" class="btn-zoro inline-block">View on GitHub</a>
+      </div>
+    </div>
+
+
+      <!-- Project 2 -->
+    <div class="bg-black bg-opacity-60 p-6 rounded-lg glow-border flex flex-col justify-between h-full">
+      <img src="https://via.placeholder.com/600x300?text=AI+Learning+Platform" alt="AI Learning Platform" class="rounded mb-4 w-full">
+
+      <div class="flex-grow">
+        <h2 class="text-2xl font-bold text-green-300 mb-2">AI-Based Learning Platform</h2>
+        <p class="text-gray-300">
+          A personalized education tool that adapts to students’ strengths and weaknesses. It leverages AI to provide tailored lessons, prompt-driven learning, and real-time feedback to maximize engagement and understanding.
+        </p>
+      </div>
+
+      <div class="mt-6">
+        <a href="https://github.com/naveenkumarsubramanian001/AI-Driven-Educational-Application" target="_blank" class="btn-zoro inline-block">View on GitHub</a>
+      </div>
+    </div>
+     
+  </main>
+  
+  <!-- Achievements Section -->
+  <main id="achievements" class="max-w-5xl mx-auto p-8">
+    <h1 class="text-4xl font-bold text-green-400 mb-8 text-center">Achievements & Certifications</h1>
+
+  <!-- Highlights -->
+  <section class="mb-12">
+    <h2 class="text-2xl font-semibold text-green-300 mb-6">🏆 Competition Achievements</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- IIT Madras -->
+      <div class="bg-black bg-opacity-60 p-4 rounded-lg glow-border text-center">
+        <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20172401.png?updatedAt=1750421054744" alt="IIT Madras Winner" class="w-full rounded mb-3">
+        <p class="text-gray-200 font-semibold">IIT Madras Shaastra 2nd AI/ML Challenge Winner</p>
+      </div>
+      <!-- IIT Bombay -->
+      <div class="bg-black bg-opacity-60 p-4 rounded-lg glow-border text-center">
+        <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20173536.png?updatedAt=1750421149603" alt="IIT Bombay TechFest" class="w-full rounded mb-3">
+        <p class="text-gray-200 font-semibold">Notable Participant – IIT Bombay TechFest</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Course Certifications -->
+  <section class="mb-12">
+  <h2 class="text-2xl font-semibold text-green-300 mb-6">📚 Course Certifications</h2>
+  
+  <!-- Coursera -->
+  <h3 class="text-xl text-green-200 font-semibold mb-4">Coursera</h3>
+  <div class="grid md:grid-cols-3 gap-6 mb-6">
+  
+    <!-- Certificate 1 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20174109.png?updatedAt=1750421555936" class="rounded mb-3 w-full" alt="Foundations: Data, Data, Everywhere">
+    <p class="text-gray-200 font-medium">Foundations: Data, Data, Everywhere</p>
+  </div>
+
+  <!-- Certificate 2 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20174052.png?updatedAt=1750421555982" class="rounded mb-3 w-full" alt="AWS S3 Basics">
+    <p class="text-gray-200 font-medium">AWS S3 Basics</p>
+  </div>
+  
+</div>
+
+<!-- Springboard -->
+<h3 class="text-xl text-green-200 font-semibold mb-4">Infosys Springboard</h3>
+<div class="grid md:grid-cols-3 gap-6 mb-6">
+
+  <!-- Certificate 1 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20195017.png?updatedAt=1750429711606" class="rounded mb-3 w-full" alt="Certificate - Business Intelligence">
+    <p class="text-gray-200 font-medium">Introduction to Business Intelligence</p>
+  </div>
+
+  <!-- Certificate 2 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20195116.png?updatedAt=1750429711641" class="rounded mb-3 w-full" alt="Certificate - Multidimensional Data Modeling">
+    <p class="text-gray-200 font-medium">Multidimensional Data Modeling</p>
+  </div>
+
+  <!-- Certificate 3 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20195315.png?updatedAt=1750429711611" class="rounded mb-3 w-full" alt="Certificate - ER Modeling">
+    <p class="text-gray-200 font-medium">Introduction to Entity Relationship ER Modeling</p>
+  </div>
+
+  <!-- Certificate 4 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20195356.png?updatedAt=1750429711689" class="rounded mb-3 w-full" alt="Certificate - Power BI Basics">
+    <p class="text-gray-200 font-medium">Learning Microsoft Power BI</p>
+  </div>
+
+  <!-- Certificate 5 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20195505.png?updatedAt=1750429711712" class="rounded mb-3 w-full" alt="Certificate - Power BI Hands-On">
+    <p class="text-gray-200 font-medium">Hands-On Data Visualization with Microsoft Power BI</p>
+  </div>
+
+  <!-- Certificate 6 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20195824.png?updatedAt=1750429711630" class="rounded mb-3 w-full" alt="Certificate - Data Science">
+    <p class="text-gray-200 font-medium">Data Science</p>
+  </div>
+
+  <!-- Certificate 7 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20195807.png?updatedAt=1750429711633" class="rounded mb-3 w-full" alt="Certificate - Excel">
+    <p class="text-gray-200 font-medium">Excel</p>
+  </div>
+
+  <!-- Certificate 8 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20195749.png?updatedAt=1750429711696" class="rounded mb-3 w-full" alt="Certificate - Cloud Technologies">
+    <p class="text-gray-200 font-medium">Cloud Technologies</p>
+  </div>
+
+  <!-- Certificate 9 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20195731.png?updatedAt=1750429711716" class="rounded mb-3 w-full" alt="Certificate - Big Data">
+    <p class="text-gray-200 font-medium">Big Data</p>
+  </div>
+
+</div>
+
+<!-- NPTEL -->
+<h3 class="text-xl text-green-200 font-semibold mb-4">NPTEL</h3>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+
+  <!-- Certificate 1 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20201352.png?updatedAt=1750432013484" 
+         class="rounded mb-3 w-full" 
+         alt="NPTEL Certificate - Python for Data Science">
+    <p class="text-gray-200 font-medium">Python for Data Science</p>
+  </div>
+
+  <!-- Certificate 2 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20203749.png?updatedAt=1750432083678" 
+         class="rounded mb-3 w-full" 
+         alt="NPTEL Certificate - Deep Learning for NLP">
+    <p class="text-gray-200 font-medium">Deep Learning for Natural Language Processing</p>
+  </div>
+
+</div>
+
+
+  <!-- Udemy -->
+<h3 class="text-xl text-green-200 font-semibold mb-4">Udemy</h3>
+<div class="grid md:grid-cols-3 gap-6 mb-6">
+
+  <!-- Certificate 1 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20173727.png?updatedAt=1750421306940" 
+         class="rounded mb-3 w-full" 
+         alt="Certificate - Complete Python Programming Course">
+    <p class="text-gray-200 font-medium">
+      Learn Python: The Complete Python Programming Course
+    </p>
+  </div>
+
+  <!-- Certificate 2 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20173744.png?updatedAt=1750421306978" 
+         class="rounded mb-3 w-full" 
+         alt="Certificate - Web Design in Photoshop UI/UX">
+    <p class="text-gray-200 font-medium">
+      Master Web Design in Photoshop: Complete UI/UX Masterclass
+    </p>
+  </div>
+
+</div>
+
+  <!-- LeetCode Badges -->
+<h3 class="text-xl text-green-200 font-semibold mb-4">LeetCode Badges</h3>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+
+  <!-- Badge 1 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20204010.png?updatedAt=1750432388972" 
+         class="rounded mb-3 w-full" 
+         alt="LeetCode 50 Days Badge 2025">
+    <p class="text-gray-200 font-medium">50 Days Badge 2025</p>
+  </div>
+
+  <!-- Badge 2 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20203947.png?updatedAt=1750432389010" 
+         class="rounded mb-3 w-full" 
+         alt="LeetCode 100 Days Badge 2025">
+    <p class="text-gray-200 font-medium">100 Days Badge 2025</p>
+  </div>
+
+  <!-- Badge 3 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20204156.png?updatedAt=1750432388977" 
+         class="rounded mb-3 w-full" 
+         alt="LeetCode Daily Challenge Badge March 2025">
+    <p class="text-gray-200 font-medium">DCC March 2025</p>
+  </div>
+
+  <!-- Badge 4 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20204144.png?updatedAt=1750432388961" 
+         class="rounded mb-3 w-full" 
+         alt="LeetCode Daily Challenge Badge April 2025">
+    <p class="text-gray-200 font-medium">DCC April 2025</p>
+  </div>
+
+  <!-- Badge 5 -->
+  <div class="bg-black bg-opacity-60 p-4 rounded glow-border text-center">
+    <img src="https://ik.imagekit.io/hajnl1jjn/Screenshot%202025-06-20%20204132.png?updatedAt=1750432388967" 
+         class="rounded mb-3 w-full" 
+         alt="LeetCode Daily Challenge Badge May 2025">
+    <p class="text-gray-200 font-medium">DCC May 2025</p>
+  </div>
+
+</div>
+
+
+  <!-- More Certificates -->
+  <div class="text-center mt-10">
+    <a href="https://drive.google.com/drive/folders/your_google_drive_link" target="_blank"
+      class="bg-green-500 text-black px-6 py-2 rounded hover:bg-green-400 transition duration-300 font-semibold">
+      View More Certificates (Participants, Workshops, etc.)
+    </a>
+  </div>
+</main>
+
+
+ <!-- Resume Section -->
+<main id="resume" class="max-w-6xl mx-auto p-8">
+    <h1 class="text-4xl font-extrabold mb-6 text-center">My Resume</h1>
+
+   <section class="section-bg">
+  <h2>Education</h2>
+  <div class="resume-entry">
+    <strong>St. Joseph’s College of Engineering</strong> – B.E. AI & ML (CGPA: 8.31)
+    <span>Nov 2022 – Present</span>
+  </div>
+  <div class="resume-entry">
+    <strong>Shri A Ganesan Hr. Sec. School (HSC)</strong> – 81%
+    <span>2021 – 2022</span>
+  </div>
+  <div class="resume-entry">
+    <strong>Shri A Ganesan Hr. Sec. School (SSLC)</strong> – 83%
+    <span>2019 – 2020</span>
+  </div>
+</section>
+
+
+   <section class="section-bg">
+  <h2>Experience</h2>
+  <div class="resume-entry">
+    <strong>Creative Team Member, Terv Pro</strong> – Jan 2024 to Jul 2024
+    <ul class="ml-5 list-disc text-sm">
+      <li>Produced engaging promotional videos using Premiere Pro & DaVinci Resolve.</li>
+      <li>Delivered high-quality projects under tight deadlines.</li>
+    </ul>
+  </div>
+  <div class="resume-entry">
+    <strong>Freelancer – Photography & Videography</strong> – Jan 2023 to Present
+    <ul class="ml-5 list-disc text-sm">
+      <li>Handled event shoots and post-production for multiple clients.</li>
+      <li>Worked as Director of Photography on short films.</li>
+    </ul>
+  </div>
+</section>
+
+
+    <section class="mb-10 section-bg">
+      <h2 class="text-2xl font-bold mb-4">Projects</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Agri Ai:</strong> Smart farming rover with real-time soil analytics.</li>
+        <li><strong>Gunshot Detection Drone:</strong> FPGA + ML powered acoustic threat detection system.</li>
+        <li><strong>AI-Based Learning Platform:</strong> Personalized learning using LLMs and prompt engineering.</li>
+      </ul>
+    </section>
+
+    <section class="section-bg">
+  <h2>Achievements & Certifications</h2>
+  <ul class="list-disc list-inside text-gray-300">
+    <li><strong>Winner:</strong> IIT Madras Shaastra AI/ML Challenge</li>
+    <li><strong>Participant:</strong> IIT Bombay TechFest</li>
+    <li><strong>Certified:</strong> Python for Data Science, Photoshop Web Design</li>
+  </ul>
+</section>
+
+
+    <section class="section-bg">
+      <h2 class="text-2xl font-bold mb-4">Skills</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Languages:</strong> Python, Java</li>
+        <li><strong>ML:</strong> Feature Engineering, Hyperparameter Tuning, Optimization (Adam, NAG)</li>
+        <li><strong>Tools:</strong> Scikit-learn, Power BI, Tableau, Excel, MySQL, Matplotlib, Seaborn, Figma</li>
+        <li><strong>Soft Skills:</strong> Leadership, Public Speaking, Strategic Thinking</li>
+      </ul>
+    </section>
+  </main>
+ <!-- Others Section -->
+<main id="others" class="max-w-4xl mx-auto p-8">
+    <h1 class="text-4xl font-bold text-green-400 mb-6 text-center">Beyond Code</h1>
+    <p class="text-center text-gray-300 mb-10">What drives me outside the tech realm – community, creativity, and curiosity.</p>
+
+    <!-- Community Service -->
+<section class="mb-12">
+  <h2 class="text-2xl text-green-300 font-semibold mb-4">Community Service</h2>
+  <div class="bg-black bg-opacity-60 p-6 rounded-lg glow-border text-center">
+    
+    <!-- Description -->
+    <p class="text-gray-300 mb-2">
+      As a <span class="text-green-400 font-medium">volunteer coach at U&I</span>, I support the education of underprivileged children by mentoring both students and fellow volunteers. I help organize weekly teaching sessions, host interactive events, and lead <span class="text-green-400">fundraising campaigns</span> to enhance learning opportunities.
+    </p>
+    <p class="text-gray-300">
+      This experience has not only strengthened my leadership skills but also deepened my commitment to making a positive impact through tech and community service.
+    </p>
+  </div>
+</section>
+
+    <!-- Photography & Filmmaking -->
+<section class="mb-12">
+  <h2 class="text-2xl text-green-300 font-semibold mb-4">Photography & Filmmaking</h2>
+  <div class="bg-black bg-opacity-60 p-6 rounded-lg glow-border text-center">
+
+    <p class="text-gray-300 mb-2">
+      I’m a passionate <span class="text-green-400 font-medium">freelance photographer and videographer</span> with hands-on experience in multiple paid projects, ranging from event shoots to commercial reels.
+    </p>
+
+    <p class="text-gray-300 mb-2">
+      I work as a <span class="text-green-400">Director of Photography (DOP)</span> and filmmaker, actively scripting and directing short films with strong emphasis on emotion, storytelling, and cinematic visuals.
+    </p>
+
+    <p class="text-gray-300 mb-2">
+      Beyond freelancing, I run a creative media company that provides <span class="text-green-400">social media marketing and content management</span> services to clients across industries.
+    </p>
+
+    <p class="text-gray-300">
+      Photography isn’t just work — it’s a deep-rooted passion that shapes how I see the world, one frame at a time.
+    </p>
+    
+  </div>
+</section>
+
+ <!-- Hobbies -->
+<section class="mb-12">
+  <h2 class="text-2xl text-green-300 font-semibold mb-4">Hobbies</h2>
+  <div class="bg-black bg-opacity-60 p-6 rounded-lg glow-border">
+    <ul class="list-disc list-inside text-gray-300 space-y-2">
+      <li><span class="text-green-400">Manga Reader & Anime Fan:</span> A proud otaku! One Piece is my all-time favorite — Zoro’s spirit, loyalty, and focus inspire both my hustle and discipline.</li>
+      <li><span class="text-green-400">Film Enthusiast:</span> I enjoy high-energy action films and love analyzing cinematography, fight choreography, and storytelling in films.</li>
+      <li><span class="text-green-400">Exploring Tech & Open Source:</span> Whether it’s dev blogs, GitHub projects, or new tools — I’m always experimenting and learning.</li>
+    </ul>
+  </div>
+</section>
+
+  </main>
+
+  <!-- Contact Section -->
+<main id="contact" class="max-w-4xl mx-auto p-8">
+  <h1 class="text-4xl font-bold text-green-400 mb-6 text-center">Get in Touch</h1>
+  <p class="text-center text-gray-300 mb-10">Feel free to reach out for collaborations, freelance work, or just a tech talk!</p>
+
+  <!-- Thank You Popup (hidden initially) -->
+  <div id="thankYouMessage" class="hidden bg-green-700 text-white p-4 mb-6 rounded-lg text-center">
+    ✅ Thank you! Your message has been sent.
+  </div>
+
+  <form id="contactForm" action="https://formspree.io/f/mnnvbvgz" method="POST" class="bg-black bg-opacity-60 p-6 rounded-lg glow-border space-y-6">
+    <div>
+      <label class="block mb-1 text-green-200" for="name">Name</label>
+      <input type="text" id="name" name="name" required class="w-full p-3 bg-black text-white border border-green-400 rounded focus:outline-none focus:ring-2 focus:ring-green-500" />
+    </div>
+
+    <div>
+      <label class="block mb-1 text-green-200" for="email">Email</label>
+      <input type="email" id="email" name="email" required class="w-full p-3 bg-black text-white border border-green-400 rounded focus:outline-none focus:ring-2 focus:ring-green-500" />
+    </div>
+
+    <div>
+      <label class="block mb-1 text-green-200" for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required class="w-full p-3 bg-black text-white border border-green-400 rounded focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+    </div>
+
+    <button type="submit" class="btn-send">Send Message</button>
+  </form>
+
+  <!-- Form submit success logic -->
+  <script>
+    const form = document.getElementById("contactForm");
+    const thankYou = document.getElementById("thankYouMessage");
+
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault(); // stop default form submission
+
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (response.ok) {
+        form.reset();
+        thankYou.classList.remove("hidden");
+        thankYou.scrollIntoView({ behavior: "smooth" });
+
+        // auto-hide the message after 5 seconds
+        setTimeout(() => {
+          thankYou.classList.add("hidden");
+        }, 5000);
+      } else {
+        alert("Oops! Something went wrong.");
+      }
+    });
+  </script>
+</main>
+
+
+ <!-- Footer -->
+<footer class="bg-gradient-to-tr from-black to-green-900 text-center p-4 text-green-400">
+  &copy; 2025 Naveen Kumar's Portfolio | Prompted and developed with ❤️ using ChatGPT.
+</footer>
 </body>
 </html>
