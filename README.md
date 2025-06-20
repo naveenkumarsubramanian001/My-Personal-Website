@@ -100,13 +100,17 @@ Make sure to verify your Formspree account if you change the endpoint.
 
 ---
 
-## ✨ Screenshots (Optional)
+## ✨ Screenshots 
 
 You can add screenshots or a GIF demo here using markdown:
 
 ```markdown
-![Homepage Screenshot](assets/screenshot-home.png)
-![Projects Section](assets/screenshot-projects.png)
+![Screenshot 2025-06-20 215349](https://github.com/user-attachments/assets/53eaa046-8eb7-46af-8400-735ad654b3d9)
+![Screenshot 2025-06-20 215403](https://github.com/user-attachments/assets/33014771-b938-473e-b109-f59d04dd4638)
+![Screenshot 2025-06-20 215418](https://github.com/user-attachments/assets/9fe3d43e-f854-4d4d-813d-9d2b7f47b9f5)
+![Screenshot 2025-06-20 215433](https://github.com/user-attachments/assets/be617477-2e42-48da-adf6-059c89b2bd5f)
+
+
 ```
 
 ---
@@ -133,12 +137,11 @@ Inspired by Zoro ⚔️ and built with the help of **ChatGPT**
 
 You can reach out via the contact form on the site, or connect via:
 
-- GitHub: [@naveenkumarsubramanian001](https://github.com/naveenkumarsubramanian001)  
-- LinkedIn: *(your-link)*  
-- Email: *(your-email if public)*  
+- GitHub: [@naveenkumarsubramanian001](https://github.com/naveenkumarsubramanian001)    
+- Email: naviinkumar@gmail.com
 
 ---
 
-## 📄 License (Optional)
+## 📄 License 
 
 This project is open-source. You're free to fork and customize it for personal use. Please give credit where due.
