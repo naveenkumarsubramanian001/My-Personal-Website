@@ -9,7 +9,7 @@ Hosted using **GitHub Pages**, this site reflects both my technical abilities an
 ## 🔥 Live Demo
 
 You can view the website live at:  
-👉 [https://your-github-username.github.io/your-repo-name](https://your-github-username.github.io/your-repo-name)
+👉  https://naveenkumarsubramanian001.github.io/My-Personal-Website/
 
 ---
 
